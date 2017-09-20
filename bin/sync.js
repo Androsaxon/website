@@ -6,7 +6,7 @@ var proxyPort = port+1;
 sync.watch([
   'dist/**/*.{js,css,html}',
   'dist/assets/img/*.*'
-]).on('change', sync.reload);
+]).on('change', sync.reload).on('add', sync.reload);
 
 sync.init({
   proxy: 'localhost:' + proxyPort, // local server port to proxy with browsersync

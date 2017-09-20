@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "box-sizing",
+    "box-model"
+  ]
+}

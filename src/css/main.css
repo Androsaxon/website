@@ -1,3 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #D2D2D2;
+  font-size: 10px; /*base size*/
+  height: 100%;
+  /* -webkit-print-color-adjust: exact; */
+}
+
+
 body {
-  border: 1px dashed;
+  background-color: #273375;
+  border-right: 10px solid #CF202C;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0 auto; /*center body */
+  padding: 10px 0 10px 10px;
+  width: 98%;
+}
+
+
+.content-wrapper {
+  background-color: #FFFFFF;
+  box-shadow: 2px 5px 10px #000000;
+  min-height: 100%;
+}
+
+.main-header {
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 20px 15px 5px;
+}
+
+.logo {
+  float: left;
+  width: 250px;
+}
+
+.main-nav {
+  float: right;
+  margin-right: 10px;
+}
+
+
+.main-nav ul {
+  overflow: hidden;
+}
+
+
+.main-nav li {
+  border-right: 1px solid #273375;
+  display: block;
+  float: left;
+  list-style-type: none;
+}
+
+.main-nav li:last-of-type {
+  border-right: none;
+}
+
+.main-nav li:hover {
+  border-bottom: 4px solid #CF202C;
+}
+
+.main-nav a {
+  color: #232323;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 35px;
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+h1 {
+  color: #273375;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2em;
+}
+
+h2 {
+  color: #CF202C;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.7em;
+  padding-bottom: 15px;
+}
+
+main {
+  color: #232323;
+  margin: auto;
+  max-width: 864px;
+  width: 85%;
+}
+
+
+main .section {
+  background-color: #FFFFFF;
+  border-top: 1px dashed;
+  font-size: 1.6em;
+  font-family: 'Libre Baskerville', serif;
+  min-height: 500px;
+  /* margin: 10px 10px 10px 0; */
+  padding: 20px;
+}
+
+
+.main-footer {
+  /* margin-right: -7px; */
+  background: url('/assets/img/androsaxon-logo.png') no-repeat left center;
+  background-size: 300px auto;
+  clear: both;
+  color: #FFFFFF;
+  height: 300px;
+  /* margin-left: -20px; */
+  padding: 50px 5px 0 300px;
+}
+
+.copyright {
+  font-size: 1em;
+  text-align: center;
+  width: 200px;
 }
