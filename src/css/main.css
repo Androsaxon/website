@@ -17,20 +17,19 @@ body {
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   margin: 0 auto; /*center body */
-  padding: 10px 0 10px 10px;
+  padding: 0 0 10px 10px;
   width: 98%;
 }
 
 
-.content-wrapper {
+.main-wrapper {
   background-color: #FFFFFF;
   box-shadow: 2px 5px 10px #000000;
-  min-height: 100%;
 }
 
 .main-header {
+  border-bottom: 1px solid;
   height: 40px;
-  margin-bottom: 20px;
   padding: 20px 15px 5px;
 }
 
@@ -40,8 +39,10 @@ body {
 }
 
 .main-nav {
-  float: right;
   margin-right: 10px;
+  margin: auto;
+  /* float: right; */
+  text-align:center;
 }
 
 
@@ -52,8 +53,8 @@ body {
 
 .main-nav li {
   border-right: 1px solid #273375;
-  display: block;
-  float: left;
+  display: inline-block;
+  /* float: left; */
   list-style-type: none;
 }
 
@@ -70,15 +71,9 @@ body {
   display: block;
   font-size: 1.5em;
   font-weight: bold;
-  line-height: 35px;
+  line-height: 1.9em;
   padding: 0 5px;
   text-decoration: none;
-}
-
-h1 {
-  color: #273375;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 2em;
 }
 
 h2 {
@@ -89,27 +84,52 @@ h2 {
 }
 
 main {
-  color: #232323;
+  color: #828282;
+  /* color: #232323; */
   margin: auto;
-  max-width: 864px;
-  width: 85%;
 }
 
+main .intro {
+  background-color: #D2D2D2;
+  font-size: 1.6em;
+  background: linear-gradient(to right, #D2D2D2, #FFFFFF );
+  /* height: 600px; */
+  margin-bottom: 20px;
+  padding: 40px 0;
+}
+
+main .intro img {
+  width:500px;
+  display: block;
+  margin: auto;
+}
 
 main .section {
-  background-color: #FFFFFF;
-  border-top: 1px dashed;
+  border-bottom: 1px dashed;
   font-size: 1.6em;
   font-family: 'Libre Baskerville', serif;
-  min-height: 500px;
+  min-height: 400px;
   /* margin: 10px 10px 10px 0; */
+  margin-bottom: 20px;
   padding: 20px;
 }
 
 
+main .section:last-of-type {
+  border-bottom: none;
+}
+
+
+.content-wrapper {
+  margin: auto;
+  max-width: 864px;
+  width: 85%;
+
+}
+
 .main-footer {
   /* margin-right: -7px; */
-  background: url('/assets/img/androsaxon-logo.png') no-repeat left center;
+  background: url('/assets/img/androsaxon-logo-white.png') no-repeat left center;
   background-size: 300px auto;
   clear: both;
   color: #FFFFFF;
@@ -122,4 +142,8 @@ main .section {
   font-size: 1em;
   text-align: center;
   width: 200px;
+}
+
+.hidden {
+  display: none;
 }
