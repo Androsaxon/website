@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -6,7 +7,6 @@
 html {
   background-color: #D2D2D2;
   font-size: 10px;
-  /*base size*/
   height: 100%;
   /* -webkit-print-color-adjust: exact; */
 }
@@ -14,42 +14,45 @@ html {
 
 body {
   background-color: #273375;
-  border-right: 10px solid #CF202C;
-  box-sizing: border-box;
+  border-left: 1em solid #273375;
+  border-right: 1em solid #CF202C;
   font-family: 'Quicksand', sans-serif;
+  left: 1em;
   margin: 0 auto;
-  min-width: 400px;
-  padding: 0 0 10px 10px;
-  width: 98%;
+  min-width: 36em;
+  position: absolute;
+  right: 1em;
+  top: 0;
 }
-
 
 .main-wrapper {
   background-color: #FFFFFF;
-  box-shadow: 2px 5px 10px #000000;
+  box-shadow: .2em .5em 1em #000000;
 }
 
 
-
-/* Beigin: Main Header */
-
-.main-header {
-  border-bottom: 1px solid;
-  height: 40px;
-  padding: 20px 15px 5px;
+.content-wrapper,
+ nav ul {
+  margin: auto;
+  max-width: 1176px;
+  min-width: 340px;
+  text-align: center;
 }
 
-.logo {
-  float: left;
-  width: 250px;
-}
+/* Begin: Main Header */
 
 /* Begin: Naviation Menu */
-.main-nav {
-  /* float: right; */
-  margin: auto;
-  margin-right: 10px;
-  text-align: center;
+
+.nav-wrapper {
+  background-color: #FFFFFF;
+  /* background: #FFFFFF url(/assets/img/androsaxon-logo-simple.png) .5em .5em/5em no-repeat; */
+  border-bottom: 1px solid;
+  height: 4.5em;
+  left: 2em;
+  position: fixed;
+  right: 2em;
+  top: 0;
+  z-index: 10;
 }
 
 
@@ -57,12 +60,11 @@ body {
   overflow: hidden;
 }
 
-
 .main-nav li {
-  border-right: 1px solid #273375;
+  border-right: .1em solid #273375;
   display: inline-block;
-  /* float: left; */
   list-style-type: none;
+  margin-top: .5em;
 }
 
 .main-nav li:last-of-type {
@@ -70,18 +72,20 @@ body {
 }
 
 .main-nav li:hover {
-  border-bottom: 4px solid #CF202C;
+  border-bottom: .4em solid #CF202C;
 }
 
 .main-nav a {
   color: #232323;
   display: block;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
-  line-height: 1.9em;
-  padding: 0 5px;
+  line-height: 1.5em;
+  padding: .5em .5em;
   text-decoration: none;
 }
+
+
 /* End: Naviation Menu */
 
 
@@ -90,30 +94,29 @@ body {
 main {
   color: #828282;
   color: #232323;
-  margin: auto;
 }
 
 main .intro {
-  background-color: #D2D2D2;
-  /* background: linear-gradient(to right, #D2D2D2, #FFFFFF); */
-  font-size: 1.6em;
-  margin-bottom: 20px;
-  padding: 40px 0;
+  background-color: #E9E9E9;
+  margin-bottom: 3em;
+  padding: 8.5em 0 4em;
 }
 
 main .intro img {
   display: block;
   margin: auto;
-  width: 500px;
+  max-width: 600px;
+  width: 100%;
 }
 
 main .section {
   border-bottom: 1px dashed;
   font-family: 'Libre Baskerville', serif;
-  font-size: 1.6em;
-  margin-bottom: 20px;
-  min-height: 400px;
-  padding: 20px;
+  font-size: 1.5em;
+  line-height: 1.7em;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  padding: .5em 4% 3em;
 }
 
 
@@ -121,116 +124,98 @@ main .section:last-of-type {
   border-bottom: none;
 }
 
-
-.content-wrapper {
-  line-height: 1.7em;
-  margin: auto;
-  max-width: 864px;
-  text-align: center;
-  width: 85%;
-  word-spacing: .15em;
-}
-
-
-.content-wrapper p {
-  margin-bottom: 30px;
-  margin-top: 10px;
+main .section p {
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 h2 {
   color: #CF202C;
   font-family: 'Quicksand', sans-serif;
   font-size: 1.7em;
-  padding-bottom: 15px;
+  margin-bottom: 1em;
 }
 
 h3 {
   font-family: 'Quicksand', sans-serif;
-  margin-top: 30px;
 }
 
 .domain-list {
   list-style-type: none;
-  margin-top: 50px;
 }
 
-.domain-list li{
-  display: inline-block;
-  line-height: 1.3em;
-  margin: 10px 2px 50px 0;
-  padding: 5px;
-  vertical-align: top;
-  width: 270px;
+.domain-list li {
+  font-size: 1em;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  word-spacing: .1em;
 }
 
 .domain-list li img {
-  display: block;
-  margin: auto;
-  width: 200px;
+  width: 20%;
 }
 
 .contact-form {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.1em;
-  margin: 10px auto;
+  margin: auto;
   text-align: left;
-  width: 50%;
+  width: 90%;
 }
 
 .contact-form .label {
-  display:inline-block;
-  margin-right: 10px;
-  text-align: right;
-  vertical-align: top;
-  width: 75px;
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: .3em;
 }
 
-.contact-form input[type="text"], .contact-form textarea {
-  border: 1.3px dashed #273375;
-  border-radius: 5px;
+.contact-form input[type="text"],
+.contact-form textarea {
+  border: 1.3px dashed #000000;
+  border-radius: .5em;
+  display: inline-block;
   padding: 5px;
-  width: 260px;
+  width: 100%;
 }
 
-.contact-form input[type="text"]:focus, .contact-form textarea:focus  {
-  border-style: solid;
+.contact-form textarea {
+  height: 5em;
+  max-width: 100%;
+  resize: vertical;
+}
 
+.contact-form input[type="text"]:focus,
+.contact-form textarea:focus {
+  border: 2px solid #273375;
+  border-radius: 0;
 }
 
 
 .contact-form input[type="submit"] {
   background-color: #273375;
-  border:none;
+  border: none;
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  float: right;
   padding: 10px 15px;
 }
 
 .contact-form input[type="submit"]:hover {
-  box-shadow: 0 0 10px #000000;
-  margin-right: 2px;
-  margin-top: 2px;
+  box-shadow: .1em .1em 1em #A5A5A5;
   cursor: pointer;
-
+  transform: translate(2px, 2px);
 }
 
 .main-footer {
-  /* margin-right: -7px; */
   background: url('/assets/img/androsaxon-logo-white.png') no-repeat left center;
-  background-size: 300px auto;
+  /* background-size: 300px auto; */
   clear: both;
   color: #FFFFFF;
-  height: 300px;
-  /* margin-left: -20px; */
-  padding: 50px 5px 0 300px;
+  height: 30em;
 }
 
 .copyright {
   font-size: 1em;
-  text-align: center;
-  width: 200px;
 }
 
 .hidden {

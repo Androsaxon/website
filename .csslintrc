@@ -1,6 +1,7 @@
 {
   "ignore": [
     "box-sizing",
-    "box-model"
+    "box-model",
+    "universal-selector"
   ]
 }
