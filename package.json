@@ -10,7 +10,7 @@
     "dev": "npm run dev:build; npm run dev:serve",
     "dev:build": "npm run clean && concurrently $npm_package_config_format \"npm run html\" \"npm run js:dev\" \"npm run css:dev\" \"npm run assets\"",
     "dev:serve": "npm run dev:watch & NODE_ENV=development concurrently $npm_package_config_serve_format \"node bin/server.js\" \"node bin/sync.js\"",
-    "dev:watch": "concurrently $npm_package_config_format \"npm run html:watch\" \"npm run js:watch\" \"npm run css:watch\"",
+    "dev:watch": "concurrently $npm_package_config_format \"npm run html:watch\" \"npm run js:watch\" \"npm run css:watch\" \"npm run assets:watch\"",
     "prod": "npm run prod:build && npm run prod:serve",
     "prod:build": "npm run clean && npm run html && npm run js && npm run css && npm run assets",
     "prod:serve": "node bin/server.js",
@@ -25,6 +25,7 @@
     "js:watch": "chokidar \"src/js/**/*.js\" -c \"npm run js:dev\"",
     "js:lint": "eslint src/js",
     "assets": "cp -R src/assets/* dist/assets",
+    "assets:watch": "chokidar \"src/assets/**/*.*\" -c \"npm run assets\"",
     "clean": "rm -rf dist && mkdir -p dist/assets/js && mkdirp dist/assets/css",
     "start": "npm run prod",
     "test": "echo \"Error: no test specified\" && exit 1"
