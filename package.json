@@ -6,8 +6,12 @@
     "format": "-p [{name}] -n HTML,JS,CSS,ASSETS -c white.bgBlue.bold,white.bgRed.white.bold,white.bold.bgGreen,black.bgYellow.bold",
     "serve_format": "-p [{name}] -n HTTP,RELOAD -c black.bgBlack.bold,red.bgWhite"
   },
-  "os" : ["linux"],
-  "engines": {"npm": "3.10.10"},
+  "os": [
+    "linux"
+  ],
+  "engines": {
+    "npm": "3.10.10"
+  },
   "scripts": {
     "dev": "npm run dev:build; npm run dev:serve",
     "dev:build": "npm run clean && concurrently $npm_package_config_format \"npm run html\" \"npm run js:dev\" \"npm run css:dev\" \"npm run assets\"",
@@ -43,6 +47,7 @@
   },
   "homepage": "http://androsaxon.co.uk",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "clean-css-cli": "^4.1.9",
     "csslint": "^1.0.5",
     "eslint": "^4.5.0",
