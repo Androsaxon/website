@@ -120,31 +120,13 @@ main .message-result {
   padding-top: 3em;
 }
 
-main .message-success {
-  background: url('/assets/img/success.png') center center/12.8em no-repeat;
-  height: 34em;
-}
-
-main .message-error {
-  background: url('/assets/img/error.png') center center/12.8em no-repeat;
-  height: 36em;
+main .message-result img {
+  width: 12.8em;
 }
 
 main .message-result a {
   color: #273375;
 }
-
-main .message-success .return {
-  margin-top: 18em;
-}
-
-
-main .message-error .return {
-  margin-top: 15em;
-}
-
-
-
 
 main .section:last-of-type {
   border-bottom: none;
