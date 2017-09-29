@@ -17,12 +17,9 @@ body {
   border-left: 1em solid #273375;
   border-right: 1em solid #CF202C;
   font-family: 'Quicksand', sans-serif;
-  left: 1em;
   margin: 0 auto;
   min-width: 36em;
-  position: absolute;
-  right: 1em;
-  top: 0;
+  width: 100%;
 }
 
 .main-wrapper {
@@ -48,9 +45,9 @@ body {
   /* background: #FFFFFF url(/assets/img/androsaxon-logo-simple.png) .5em .5em/5em no-repeat; */
   border-bottom: 1px solid;
   height: 4.5em;
-  left: 2em;
+  left: 1em;
   position: fixed;
-  right: 2em;
+  right: 1em;
   top: 0;
   z-index: 10;
 }
