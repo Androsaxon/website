@@ -32,14 +32,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/masque-app/wireframe.git"
+    "url": "git+ssh://git@github.com:androsaxon/website.git"
   },
   "author": "masque team",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://gitlab.com/masque-app/wireframe/issues"
+    "url": "https://github.com/androsaxon/website/issues"
   },
-  "homepage": "https://gitlab.com/masque-app/wireframe#README",
+  "homepage": "http://androsaxon.co.uk",
   "dependencies": {
     "clean-css-cli": "^4.1.9",
     "csslint": "^1.0.5",
