@@ -156,13 +156,12 @@ main .section p {
 }
 
 h1 {
-  color: #E9E9E9;
-  font-size: 6em;
-  display: block;
-  /* line-height: 1.1em; */
-  width: 100%;
   background-color: #A5A5A5;
+  color: #E9E9E9;
+  display: block;
+  font-size: 6em;
   text-align: center;
+  width: 100%;
 }
 
 h2 {
