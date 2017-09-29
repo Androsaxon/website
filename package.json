@@ -6,6 +6,8 @@
     "format": "-p [{name}] -n HTML,JS,CSS,ASSETS -c white.bgBlue.bold,white.bgRed.white.bold,white.bold.bgGreen,black.bgYellow.bold",
     "serve_format": "-p [{name}] -n HTTP,RELOAD -c black.bgBlack.bold,red.bgWhite"
   },
+  "os" : ["linux"],
+  "engines": {"npm": "3.10.10"},
   "scripts": {
     "dev": "npm run dev:build; npm run dev:serve",
     "dev:build": "npm run clean && concurrently $npm_package_config_format \"npm run html\" \"npm run js:dev\" \"npm run css:dev\" \"npm run assets\"",
