@@ -178,6 +178,17 @@ h3 {
   width: 18%;
 }
 
+
+.form-wrapper {
+  min-height: 30em;
+  position: relative;
+}
+
+
+.form-wrapper .message-result{
+  display: none;
+}
+
 .contact-form {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.1em;
@@ -268,4 +279,22 @@ h3 {
 
 .hidden {
   display: none;
+}
+
+
+.loader {
+  background: url('/assets/img/loader.gif') no-repeat center 8em  #FFFFFF;
+  bottom: 0;
+  display: none;
+  left:0;
+  position:absolute;
+  right:0;
+  text-align: center;
+  top: 0;
+  z-index: 9999;
+}
+
+.loader p {
+  line-height: 10em;
+  vertical-align: middle;
 }

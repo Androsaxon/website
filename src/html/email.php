@@ -3,9 +3,14 @@ if(isset($_POST['submit'])) {
 
   $email_to = "contact@androsaxon.co.uk";
   $email_subject = "Androsaxon website contact";
+  $js = isset($_POST['js']) && $_POST['js'] == 'true';
 
   function died($error) {
-    header('Location: /error ');
+    if($GLOBALS['js'] == 'true') {
+      header('HTTP/1.1 400 '.$error);
+    } else {
+      header('Location: /error?error='.$error);
+    }
     die();
   }
 
@@ -58,7 +63,14 @@ if(isset($_POST['submit'])) {
     'Reply-To: '.$email_from."\r\n" .
     'X-Mailer: PHP/' . phpversion();
   @mail($email_to, $email_subject, $email_message, $headers);
+
+  if($js == 'true') {
+    header('HTTP/1.1 200');
+  } else {
     header('Location: /success ');
+  }
+} else {
+  header('Location: /unknown');
 }
 ?>
 
