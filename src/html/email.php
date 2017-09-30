@@ -2,7 +2,7 @@
 if(isset($_POST['submit'])) {
 
   $email_to = "contact@androsaxon.co.uk";
-  $email_subject = "Androsaxon webmail submitted";
+  $email_subject = "Androsaxon website contact";
 
   function died($error) {
     header('Location: /error ');
