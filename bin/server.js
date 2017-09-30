@@ -2,12 +2,9 @@
 
 var express = require('express');
 var app = express(),
-  bodyParser = require('body-parser'),
+  request= require('request'),
   isDev = process.env.NODE_ENV === 'development',
   port = +(process.env.PORT || 3000); //cast to number
-
-
-app.use(bodyParser.urlencoded({extended:true}));
 
 if (isDev) {
   port = port + 1; //use set port+1 on dev environment as browsersync uses set port for proxying this server
@@ -15,15 +12,21 @@ if (isDev) {
 
 app.set('case sensitive routing', false);
 
-app.use('/email.php', function(req, res) {
-  var email = req.body.email;
-  console.log('Email is', email);
-  if(email) {
-    res.redirect('/success');
-  } else {
-    res.redirect('/error');
-  }
-}); // server html files
+app.post( '/email.php', function( req, res ){
+  req.pipe( request({
+    url: 'http://localhost:8000/email.php',
+    qs: req.query,
+    method: req.method
+  }, function(error){
+    if(error) {
+      if (error.code === 'ECONNREFUSED'){
+        console.error('Refused connection');
+      } else {
+        throw error;
+      }
+    }
+  })).pipe( res );
+});
 
 app.use(express.static(process.cwd() + '/dist', {
   extensions: ['html']
