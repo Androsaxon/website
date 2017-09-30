@@ -48,18 +48,16 @@
   },
   "homepage": "http://androsaxon.co.uk",
   "dependencies": {
-    "body-parser": "^1.18.2",
     "clean-css-cli": "^4.1.9",
     "csslint": "^1.0.5",
     "eslint": "^4.5.0",
-    "express": "^4.15.3",
-    "http-proxy": "^1.16.2",
     "normalize.css": "^7.0.0",
     "request": "^2.83.0",
     "uglify-js": "^3.0.12"
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",
+    "express": "^4.15.3",
     "chokidar-cli": "^1.2.0",
     "concurrently": "^3.5.0"
   }
