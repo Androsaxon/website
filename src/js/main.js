@@ -5,6 +5,7 @@
     $(document).ready(function(){
       go(stickNav);
       go(scrollSmooth);
+      go(enableFormValidate);
     });
 
     function stickNav() {
@@ -13,6 +14,10 @@
 
     function scrollSmooth() {
       $('.nav-wrapper a').smoothScroll();
+    }
+
+    function enableFormValidate() {
+      $.validate();
     }
 
     function go(fn) {
