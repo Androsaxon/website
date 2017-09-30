@@ -229,7 +229,7 @@ h3 {
 }
 
 .has-error {
-  border-left: .4em solid rgb(187, 0, 0);
+  border-left: .25em solid rgb(187, 0, 0);
   padding: 0 .5em;
 }
 
