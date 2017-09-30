@@ -3,12 +3,25 @@
   function init() {
 
     $(document).ready(function(){
-      // Sticky nav
-      $('.nav-wrapper').sticky({topSpacing:0});
-      // smooth scroll
-      $('.nav-wrapper a').smoothScroll();
+      go(stickNav);
+      go(scrollSmooth);
     });
 
+    function stickNav() {
+      $('.nav-wrapper').sticky({topSpacing:0});
+    }
+
+    function scrollSmooth() {
+      $('.nav-wrapper a').smoothScroll();
+    }
+
+    function go(fn) {
+      try {
+        fn();
+      } catch (e) {
+        //
+      }
+    }
   }
 
 )();
