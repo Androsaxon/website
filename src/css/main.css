@@ -45,6 +45,9 @@ body {
   height: 4.5em;
 }
 
+.is-sticky .nav-wrapper {
+  border-bottom: 1px solid;
+}
 
 .main-nav ul {
   overflow: hidden;
