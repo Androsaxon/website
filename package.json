@@ -19,7 +19,7 @@
     "dev:watch": "concurrently $npm_package_config_format \"npm run html:watch\" \"npm run js:watch\" \"npm run css:watch\" \"npm run assets:watch\" \"npm run php\"",
     "prod": "npm run prod:build && npm run prod:serve",
     "prod:build": "npm run clean && npm run html && npm run js && npm run css && npm run assets",
-    "prod:serve": "node bin/server.js & npm run php",
+    "prod:serve": "node bin/server.js",
     "html": "cp -R src/html/* dist/",
     "html:watch": "chokidar \"src/html/**/*.{html,php}\" -c \"npm run html\"",
     "css": "npm run css:lint && cleancss --compatibility ie8 --output dist/assets/css/main.css src/css/main.css",
@@ -60,7 +60,6 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "chokidar-cli": "^1.2.0",
-    "concurrently": "^3.5.0",
-    "node-php": "0.0.1"
+    "concurrently": "^3.5.0"
   }
 }
