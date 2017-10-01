@@ -180,6 +180,7 @@ h3 {
 
 .form-wrapper {
   min-height: 30em;
+  position: relative;
 }
 
 
