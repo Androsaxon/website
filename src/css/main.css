@@ -115,7 +115,7 @@ main .section {
   font-family: 'Libre Baskerville', serif;
   font-size: 1.5em;
   line-height: 1.7em;
-  margin-bottom: 3em;
+  /* margin-bottom: 3em; */
   margin-top: 1em;
   padding: .5em 4% 3em;
 }
@@ -148,7 +148,6 @@ h1 {
   color: #E9E9E9;
   display: block;
   font-size: 6em;
-  text-align: center;
   width: 100%;
 }
 
@@ -181,7 +180,6 @@ h3 {
 
 .form-wrapper {
   min-height: 30em;
-  position: relative;
 }
 
 
@@ -266,16 +264,28 @@ h3 {
 }
 
 .main-footer {
-  background: url('/assets/img/androsaxon-logo-white.png') no-repeat left center;
-  /* background-size: 300px auto; */
   clear: both;
   color: #FFFFFF;
-  height: 30em;
+  overflow: hidden;
+  padding: 2em 2em 2em 1em;
+}
+
+.main-footer img {
+  float: left;
+  max-width: 25em;
+  width: 50%;
 }
 
 .copyright {
-  font-size: 1em;
+  float: right;
+  font-size: 1.6em;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-align: right;
+  width: 50%;
 }
+
 
 .hidden {
   display: none;
