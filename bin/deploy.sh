@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-scp -o "PubkeyAuthentication no" bin/* "$DEPLOY_USER"@"$DEPLOY_HOST":"$DEPLOY_DIR"
-
+ find dist/ -exec curl -T {} ftp://"$DEPLOY_HOST"/"$DEPLOY_DIR"/ --user "$DEPLOY_USER":"$DEPLOY_PASS" \;
