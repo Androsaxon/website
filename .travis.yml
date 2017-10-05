@@ -7,3 +7,4 @@ deploy:
   script: bin/deploy.sh
   on:
     branch: master
+  skip_cleanup: true
