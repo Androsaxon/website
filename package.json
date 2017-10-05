@@ -32,7 +32,7 @@
     "js:lint": "eslint src/js",
     "assets": "cp -R src/assets/* dist/assets",
     "assets:watch": "chokidar \"src/assets/**/*.*\" -c \"npm run assets\"",
-    "clean": "rm -rf dist && mkdir -p dist/assets/js && mkdirp dist/assets/css",
+    "clean": "rm -rf dist && mkdir -p dist/assets/js && mkdir -p dist/assets/css",
     "start": "npm run prod",
     "test": "echo \"Error: no test specified\" && exit 0",
     "php": "php -S 127.0.0.1:8000 -t dist"
