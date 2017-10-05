@@ -1,12 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-    <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all" />
-  </head>
-  <body>
-    body
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Androsaxon</title>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Quicksand:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="intro">
+        <img class="logo" src="/assets/img/androsaxon-logo.png" alt="Androsaxon">
+        <div class="motto">
+          <img class="motto" src="/assets/img/motto.png" alt="IT is our passion">
+        </div>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#who-we-are">Who We Are</a></li>
+            <!-- <li><a href="#what&#45;we&#45;offer">What We Offer</a></li> -->
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="content-wrapper">
+        <section id="who-we-are" class="section">
+          <header>
+            <h2>Who We Are</h2>
+            <p>We are Androsaxons; Professional IT enthusiasts with expertise in a wide variety of business domains.</p>
+          </header>
+          <p>Some of the businesses we helped operates in industries such as:</p>
+          <ul class="domain-list">
+            <li>
+              <img src="/assets/img/public.png" alt="">
+              <h3>
+                Public Sector</h3>
+              <p>Working closely with our clients in public sector we help transform their IT operations to catch up with latest technologies. We built software platforms with modern web technologies and cloud based infrastructure for clients working in and regulating health, statistics, trade and investment in the UK.</p>
+            </li>
+            <li>
+              <img src="/assets/img/telecom.png" alt="">
+              <h3>Tel-co</h3>
+              <p>With the privilige of having worked with some of the biggest telephone companies with millions of subscribers we built up immense expertise in tel-co. We are here to improve the way you handle your data; We can make it easier for you to process, analyse, and secure sensitive end-user data without comprimising agility of your business.</p>
+            </li>
+            <li>
+              <img src="/assets/img/banking.png" alt="">
+              <h3>Banking</h3>
+              <p>Banking with ever flowing transaction traffic and sheer size of data to keep an eye on and make sense of is one of the trickiest insdustries to operate in. We have tackled and conquered it. We are happy to do so again to help you, always up for a challenge!</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- <section id="what&#45;we&#45;offer" class="section"> -->
+        <!--   <header> -->
+        <!--     <h2>What we Offer</h2> -->
+        <!--   </header> -->
+        <!--  -->
+        <!-- </section> -->
+
+        <section id="contact-us" class="section">
+          <header>
+            <h2>Contact Us</h2>
+            <p>We are eager to work with you to help boost your business. Why not leave us a line? We will get back to you in no time.</p>
+          </header>
+          <div class="form-wrapper">
+            <div id="loader" class="loader">
+            </div>
+            <div id="success" class="message-result message-success">
+              <h3>We have received your message.</h3>
+              <p>Thanks for contacting us. We will get back to you as soon possible.</p>
+              <img src="/assets/img/success.png" alt="">
+            </div>
+            <div id="error" class="message-result message-error">
+              <h3>Something went wrong!</h3>
+              <p>We are sorry! We were not able to deliver your message at the moment.</p>
+              <p>Please click <a href="mailto:contact@androsaxon.co.uk">here</a> to send us an email right away.</p>
+              <img src="/assets/img/error.png" alt="">
+            </div>
+            <form id="contact-form" class="contact-form" action="/email.php" method="post" accept-charset="utf-8">
+              <p>
+                <label for="name" class="label">Name</label>
+                <input type="text" name="name" id="name" value="" required data-validation-error-msg="Enter your full name" />
+              </p>
+              <p>
+                <label for="name" class="label">Email</label>
+                <input type="email" name="email" id="email" value="" required data-validation-error-msg="Enter a valid email address" />
+              </p>
+              <p>
+                <label for="message" class="label">Message</label>
+                <textarea name="message" id="message" required data-validation-error-msg="Enter your message"></textarea>
+              </p>
+              <input id="js" type="hidden" name="js" value="false">
+              <input type="submit" name="submit" value="Send" />
+            </form>
+          </div>
+
+        </section>
+      </div>
+    </main>
+  </div>
+  <footer class="main-footer">
+
+    <div class="copyright">
+      <p>
+        Copyright 2017 Androsaxon Ltd, Registered in England & Wales, Company no. 09062404
+      </p>
+    </div>
+
+    <img src="/assets/img/androsaxon-logo-white.png" alt="">
+
+  </footer>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<![endif]-->
+  <!--[if gte IE 9] ><!-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--<![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/jquery.form-validator.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/html5.js" charset="utf-8"></script>
+
+  <script src="/assets/js/main.js" charset="utf-8"></script>
+</body>
+
 </html>
