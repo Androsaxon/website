@@ -31,7 +31,7 @@
         loader.show();
         event.preventDefault();
         var form=$(this);
-        var formData=form.serialize()+'&submit';
+        var formData=form.serialize()+'&submit=ok';
         return $.post(form.attr('action'), formData)
           .done(function() {
             form.remove();
