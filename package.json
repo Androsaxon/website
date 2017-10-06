@@ -20,7 +20,7 @@
     "prod": "npm run prod:build && npm run prod:serve",
     "prod:build": "npm run clean && npm run html && npm run js && npm run css && npm run assets",
     "prod:serve": "npm run php",
-    "html": "cp -R src/html/* dist/",
+    "html": "cp -R src/html/. dist/",
     "html:watch": "chokidar \"src/html/**/*.{html,php}\" -c \"npm run html\"",
     "css": "npm run css:lint && cleancss --compatibility ie8 --output dist/assets/css/main.css src/css/main.css",
     "css:dev": "cleancss --compatibility ie8 --source-map --source-map-inline-sources --output dist/assets/css/main.css src/css/main.css",
