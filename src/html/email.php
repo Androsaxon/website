@@ -59,8 +59,8 @@ if(isset($_POST['submit'])) {
   $email_message .= "Message: ".clean_string($message)."\n";
 
   // create email headers
-  $headers = 'From: '.$email_from."\r\n".
-    'Reply-To: '.$email_from."\r\n" .
+  $headers = 'From: "Androsaxon Webmaster" <webmaster@androsaxon.co.uk>'."\r\n".
+    'Reply-To: '.$name.'<'.$email_from.'>'."\r\n" .
     'X-Mailer: PHP/' . phpversion();
   @mail($email_to, $email_subject, $email_message, $headers);
 
