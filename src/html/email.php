@@ -69,8 +69,6 @@ if(isset($_POST['submit'])) {
   } else {
     header('Location: /success ');
   }
-} else {
-  header('Location: /unknown');
 }
 ?>
 
