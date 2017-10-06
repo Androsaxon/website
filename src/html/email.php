@@ -61,7 +61,7 @@ if(isset($_POST['submit'])) {
   // create email headers
   $headers = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-  $headers .= 'From:  ' . $name . ' <' . $email_from .'>' . " \r\n" .
+  $headers .= 'From:  ' . $name . ' <webmaster@androsaxon.co.uk>' . " \r\n" .
     'Reply-To: '.  $email_from . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
   @mail($email_to, $email_subject, $email_message, $headers);
